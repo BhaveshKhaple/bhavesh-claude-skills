@@ -21,6 +21,8 @@ Think of them as reusable "expert modes" you can invoke on demand.
 
 **Invoke when:** you're building any multi-step LLM pipeline and would otherwise write a fragile `step1 → step2 → step3` chain.
 
+![Skill Architecture](./graph-engineering/diagrams/01-skill-architecture.png)
+
 **Covers 5 layers:**
 
 | Layer | What it does | When to add it |
@@ -31,7 +33,17 @@ Think of them as reusable "expert modes" you can invoke on demand.
 | 4. Multi-Agent | Split roles across specialist agents | One agent doing too many jobs |
 | 5. Critique Loop | Rubric-based revision cycle | Quality > latency |
 
+![The 5 Layers](./graph-engineering/diagrams/02-five-layers.png)
+
 **Core insight:** *Loops let agents think. Graphs let agents remember.*
+
+**Layer 1 in detail — the Reflection Loop:**
+
+![Reflection Loop](./graph-engineering/diagrams/03-reflection-loop.png)
+
+**End-to-end composed workflow — Layers 1 + 2 + 5:**
+
+![End-to-End Graph](./graph-engineering/diagrams/04-end-to-end-graph.png)
 
 [→ Full skill docs](./graph-engineering/SKILL.md)
 
